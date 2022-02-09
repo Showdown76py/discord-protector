@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 TESTING=False
-
+ACCOUNTID='unknown'
 with open('config.json','r')as f:
     if json.load(f)['sms']:
         account_sid = os.environ['TWILIO_ACCOUNT_SID']
@@ -23,7 +23,7 @@ def sendSMS(message):
         if json.load(f)['sms']:
             if not TESTING:
                 message = client.messages.create(
-                    body=f"Univers Account Protection Alert\nContinuous monitoring has detected unusual activities.\n\n{message}\n\nIT IS RECOMMENDED THAT YOU CHANGE YOUR PASSWORD IMMEDIATELY.\nhttps://discord.com/login",
+                    body=f"Univers Account Protection Alert\nACCOUNT: {ACCOUNTID}\n\nContinuous monitoring has detected unusual activities.\n\n{message}\n\nIT IS RECOMMENDED THAT YOU CHANGE YOUR PASSWORD IMMEDIATELY.\nhttps://discord.com/login",
                     to=os.environ['PHONE_NUMBER'],
                     from_='UnivrsPrtct'
                 )

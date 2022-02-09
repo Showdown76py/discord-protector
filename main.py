@@ -14,13 +14,15 @@ precedent_dm = None
 serverdm_a=[]
 @bot.event
 async def on_ready():
-    print('Online')
+    print('Online, for', str(bot.user))
+    sa.ACCOUNTID = str(bot.user)
     na.run(na.Files.CONNECTED)
 
 @bot.event
 async def on_message(msg):
     global precedent_dm, phishing_a,serverdm_a
     msgcontent = msg.content
+    print(msgcontent)
     # Physhing check
     if '://' in msgcontent:
         safe = ['steamcommunity.com','steampowered.com','discord.gg','discord.com','discord.new']
