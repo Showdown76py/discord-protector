@@ -14,6 +14,7 @@ This software might be considered as a "self-bot", which is against [Discord Ter
 > TOKEN=[your Discord token*]
 > TWILIO_ACCOUNT_SID=[Twilio Account SID. Can be found here: https://console.twilio.com/]
 > TWILIO_AUTH_TOKEN=[Twilio Authentification Token. Can be found here: https://console.twilio.com/]
+> PHONE_NUMBER=[Your phone number. e.g. +15551234567 / +33612345678]
  5. Open *config.json* and edit configuration file
  6. Run this in your command prompt: `pip3 install -r requirements.txt`
  7. Keep your command prompt open and run this `py main.py`

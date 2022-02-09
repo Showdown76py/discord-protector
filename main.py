@@ -60,5 +60,8 @@ async def on_message(msg):
                 return
 
     
-
-bot.run(os.environ.get('TOKEN'),bot=False)
+try:
+    bot.run(os.environ.get('TOKEN'),bot=False)
+except:
+    sa.sendSMS(sa.PrebuiltMessages.CONNECTION_LOST)
+    na.run(na.Files.CONNECTION_LOST)
