@@ -1,4 +1,5 @@
 # Univers Account Protector for Discord
+<img align="center" style="border: 0;" src="https://www.codefactor.io/repository/github/Showdown76py/discord-protector/badge" alt="codefactor" /></p>
 This **open-source software** made in Python **protects your account** and **notifies you immediately** after a **suspicious activity is detected**.
 
 ## WARNING
