@@ -25,7 +25,7 @@ async def on_message(msg):
     print(msgcontent)
     # Physhing check
     if '://' in msgcontent:
-        safe = ['steamcommunity.com','steampowered.com','discord.gg','discord.com','discord.new']
+        safe = ['steamcommunity.com','steampowered.com','discord.gg','discord.com','discord.new','discord.gift']
         web=msgcontent.split('://')[1].split('/')[0]
         r = difflib.get_close_matches(web, safe, 1)
         if r[0] != web:
