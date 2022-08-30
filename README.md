@@ -19,7 +19,7 @@ This software might be considered as a "self-bot", which is against [Discord Ter
 
 > PHONE_NUMBER=[Your phone number. e.g. +15551234567 / +33612345678]
  5. Open *config.json* and edit configuration file
- 6. Run this in your command prompt: `pip3 install -r requirements.txt`
+ 6. Run this in your command prompt: `py -3 -m pip install -U -r requirements.txt`
  7. Keep your command prompt open and run this `py main.py`
  8. **You're good to go!** If you enabled notifications in *config.json*, a voice should tell you that your account is being monitored.
 
