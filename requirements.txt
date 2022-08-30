@@ -1,4 +1,4 @@
 discord
 pygame
-dotenv
+python-dotenv
 twilio
