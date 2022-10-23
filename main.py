@@ -1,5 +1,6 @@
 from http import server
 import discord
+import traceback    
 from discord.ext import commands
 import os
 import time
@@ -39,6 +40,9 @@ async def on_message(msg):
         if res == 3:
             sa.sendSMS(sa.PrebuiltMessages.PHISHING)
             na.run(na.Files.SUSPICIOUS_TEXT)
+            res = 0
+            phishing_a=[]
+            serverdm_a=[]
             return
     
     # DM server all
@@ -59,11 +63,16 @@ async def on_message(msg):
             if res == 3:
                 sa.sendSMS(sa.PrebuiltMessages.DM_ALL)
                 na.run(na.Files.SUSPICIOUS_TEXT)
+                res = 0
+                phishing_a=[]
+                serverdm_a=[]
                 return
 
     
 try:
-    bot.run(os.environ.get('TOKEN'),bot=False)
+    bot.run(os.environ.get('TOKEN'))
 except:
+    print(traceback.format_exc())
+    print('CONNECTION LOST.')
     sa.sendSMS(sa.PrebuiltMessages.CONNECTION_LOST)
     na.run(na.Files.CONNECTION_LOST)

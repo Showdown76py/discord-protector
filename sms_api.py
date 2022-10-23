@@ -15,7 +15,7 @@ with open('config.json','r')as f:
 class PrebuiltMessages:
     PHISHING = 'Your Discord account sends phishing links similar to Discord or Steam Community domains.'
     DM_ALL = 'Your Discord account is sending a lot of Discord invites in different channels/user DMs!'
-    CONNECTION_LOST = 'Your token was regenerated because your password or e-mail has changed. Please update your token.'
+    CONNECTION_LOST = 'INVALID TOKEN. Your token was regenerated because your password or e-mail has changed. Please update your token.'
 
 
 def sendSMS(message):
